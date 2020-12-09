@@ -27,9 +27,9 @@ class GMCommitTableViewCell: UITableViewCell {
     }
     
     func setCommit(_ commitItem: CommitItem) {
-        authorNameLabel.text = commitItem.commit?.author?.name
-        shaLabel.text = commitItem.commit?.tree?.sha
-        commitMessageLabel.text = commitItem.commit?.message
+        authorNameLabel.text = "Author: \(commitItem.commit?.author?.name ?? String())"
+        shaLabel.text = "Sha: \(commitItem.commit?.tree?.sha ?? String())"
+        commitMessageLabel.text = "Messsage: \n \(commitItem.commit?.message ?? String())"
     }
 
 }

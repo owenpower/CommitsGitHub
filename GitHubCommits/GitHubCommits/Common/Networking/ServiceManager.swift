@@ -13,6 +13,7 @@ class GMServiceManager {
     
     private init() {}
     private let urlSession = URLSession.shared
+    private let dispatchSemaphore =  DispatchSemaphore(value: 1)
     private let jsonDecoder: JSONDecoder = {
         let jsonDecoder = JSONDecoder()
         return jsonDecoder
@@ -31,6 +32,7 @@ class GMServiceManager {
             return
         }
         
+        dispatchSemaphore.wait()
         urlSession.dataTask(with: url) { (result) in
             switch result {
             case .success(let (response, data)):
@@ -47,6 +49,7 @@ class GMServiceManager {
             case .failure( _):
                 completion(.failure(.apiError))
             }
+            self.dispatchSemaphore.signal()
         }.resume()
     }
 }
