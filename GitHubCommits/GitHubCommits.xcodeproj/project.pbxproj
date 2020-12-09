@@ -9,13 +9,20 @@
 /* Begin PBXBuildFile section */
 		21CB998B2580447B008A5FA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CB998A2580447B008A5FA9 /* AppDelegate.swift */; };
 		21CB998D2580447B008A5FA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CB998C2580447B008A5FA9 /* SceneDelegate.swift */; };
-		21CB998F2580447B008A5FA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CB998E2580447B008A5FA9 /* ViewController.swift */; };
-		21CB99922580447B008A5FA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21CB99902580447B008A5FA9 /* Main.storyboard */; };
 		21CB99952580447B008A5FA9 /* GitHubCommits.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21CB99932580447B008A5FA9 /* GitHubCommits.xcdatamodeld */; };
 		21CB999725804480008A5FA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21CB999625804480008A5FA9 /* Assets.xcassets */; };
 		21CB999A25804480008A5FA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21CB999825804480008A5FA9 /* LaunchScreen.storyboard */; };
 		21CB99A525804481008A5FA9 /* GitHubCommitsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CB99A425804481008A5FA9 /* GitHubCommitsTests.swift */; };
 		21CB99B025804481008A5FA9 /* GitHubCommitsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CB99AF25804481008A5FA9 /* GitHubCommitsUITests.swift */; };
+		21CB99C325804657008A5FA9 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CB99C225804657008A5FA9 /* ServiceManager.swift */; };
+		21CB99CD258050B2008A5FA9 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CB99CC258050B2008A5FA9 /* Author.swift */; };
+		21CB99D5258050E9008A5FA9 /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CB99D4258050E9008A5FA9 /* Commit.swift */; };
+		21CB99DA2580515D008A5FA9 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CB99D92580515D008A5FA9 /* Tree.swift */; };
+		21CB99DF258051F9008A5FA9 /* CommitItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CB99DE258051F9008A5FA9 /* CommitItem.swift */; };
+		21CB99E6258053C1008A5FA9 /* GMCommitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CB99E5258053C1008A5FA9 /* GMCommitListViewController.swift */; };
+		21CB99EE25805419008A5FA9 /* GMCommitListStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21CB99ED25805419008A5FA9 /* GMCommitListStoryboard.storyboard */; };
+		21CB99F325805568008A5FA9 /* GMCommitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CB99F225805568008A5FA9 /* GMCommitTableViewCell.swift */; };
+		21CB99F925805C2C008A5FA9 /* CommitsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CB99F825805C2C008A5FA9 /* CommitsService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +46,6 @@
 		21CB99872580447B008A5FA9 /* GitHubCommits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubCommits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21CB998A2580447B008A5FA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21CB998C2580447B008A5FA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		21CB998E2580447B008A5FA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		21CB99912580447B008A5FA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		21CB99942580447B008A5FA9 /* GitHubCommits.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GitHubCommits.xcdatamodel; sourceTree = "<group>"; };
 		21CB999625804480008A5FA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21CB999925804480008A5FA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +56,15 @@
 		21CB99AB25804481008A5FA9 /* GitHubCommitsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubCommitsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		21CB99AF25804481008A5FA9 /* GitHubCommitsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubCommitsUITests.swift; sourceTree = "<group>"; };
 		21CB99B125804481008A5FA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21CB99C225804657008A5FA9 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		21CB99CC258050B2008A5FA9 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		21CB99D4258050E9008A5FA9 /* Commit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commit.swift; sourceTree = "<group>"; };
+		21CB99D92580515D008A5FA9 /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
+		21CB99DE258051F9008A5FA9 /* CommitItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitItem.swift; sourceTree = "<group>"; };
+		21CB99E5258053C1008A5FA9 /* GMCommitListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMCommitListViewController.swift; sourceTree = "<group>"; };
+		21CB99ED25805419008A5FA9 /* GMCommitListStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GMCommitListStoryboard.storyboard; sourceTree = "<group>"; };
+		21CB99F225805568008A5FA9 /* GMCommitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMCommitTableViewCell.swift; sourceTree = "<group>"; };
+		21CB99F825805C2C008A5FA9 /* CommitsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitsService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +115,10 @@
 		21CB99892580447B008A5FA9 /* GitHubCommits */ = {
 			isa = PBXGroup;
 			children = (
+				21CB99E325805264008A5FA9 /* Sections */,
+				21CB99C025804585008A5FA9 /* Common */,
 				21CB998A2580447B008A5FA9 /* AppDelegate.swift */,
 				21CB998C2580447B008A5FA9 /* SceneDelegate.swift */,
-				21CB998E2580447B008A5FA9 /* ViewController.swift */,
-				21CB99902580447B008A5FA9 /* Main.storyboard */,
 				21CB999625804480008A5FA9 /* Assets.xcassets */,
 				21CB999825804480008A5FA9 /* LaunchScreen.storyboard */,
 				21CB999B25804480008A5FA9 /* Info.plist */,
@@ -129,6 +143,69 @@
 				21CB99B125804481008A5FA9 /* Info.plist */,
 			);
 			path = GitHubCommitsUITests;
+			sourceTree = "<group>";
+		};
+		21CB99C025804585008A5FA9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				21CB99CA2580507F008A5FA9 /* Models */,
+				21CB99C125804590008A5FA9 /* Networking */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		21CB99C125804590008A5FA9 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				21CB99F725805BE9008A5FA9 /* Commits */,
+				21CB99C225804657008A5FA9 /* ServiceManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		21CB99CA2580507F008A5FA9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				21CB99CB2580508D008A5FA9 /* Commits */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		21CB99CB2580508D008A5FA9 /* Commits */ = {
+			isa = PBXGroup;
+			children = (
+				21CB99CC258050B2008A5FA9 /* Author.swift */,
+				21CB99D4258050E9008A5FA9 /* Commit.swift */,
+				21CB99D92580515D008A5FA9 /* Tree.swift */,
+				21CB99DE258051F9008A5FA9 /* CommitItem.swift */,
+			);
+			path = Commits;
+			sourceTree = "<group>";
+		};
+		21CB99E325805264008A5FA9 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				21CB99E42580530F008A5FA9 /* ListCommits */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		21CB99E42580530F008A5FA9 /* ListCommits */ = {
+			isa = PBXGroup;
+			children = (
+				21CB99E5258053C1008A5FA9 /* GMCommitListViewController.swift */,
+				21CB99ED25805419008A5FA9 /* GMCommitListStoryboard.storyboard */,
+				21CB99F225805568008A5FA9 /* GMCommitTableViewCell.swift */,
+			);
+			path = ListCommits;
+			sourceTree = "<group>";
+		};
+		21CB99F725805BE9008A5FA9 /* Commits */ = {
+			isa = PBXGroup;
+			children = (
+				21CB99F825805C2C008A5FA9 /* CommitsService.swift */,
+			);
+			path = Commits;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +313,7 @@
 			files = (
 				21CB999A25804480008A5FA9 /* LaunchScreen.storyboard in Resources */,
 				21CB999725804480008A5FA9 /* Assets.xcassets in Resources */,
-				21CB99922580447B008A5FA9 /* Main.storyboard in Resources */,
+				21CB99EE25805419008A5FA9 /* GMCommitListStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,10 +338,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21CB998F2580447B008A5FA9 /* ViewController.swift in Sources */,
+				21CB99F925805C2C008A5FA9 /* CommitsService.swift in Sources */,
+				21CB99CD258050B2008A5FA9 /* Author.swift in Sources */,
+				21CB99DF258051F9008A5FA9 /* CommitItem.swift in Sources */,
+				21CB99D5258050E9008A5FA9 /* Commit.swift in Sources */,
 				21CB99952580447B008A5FA9 /* GitHubCommits.xcdatamodeld in Sources */,
 				21CB998B2580447B008A5FA9 /* AppDelegate.swift in Sources */,
+				21CB99F325805568008A5FA9 /* GMCommitTableViewCell.swift in Sources */,
+				21CB99E6258053C1008A5FA9 /* GMCommitListViewController.swift in Sources */,
+				21CB99DA2580515D008A5FA9 /* Tree.swift in Sources */,
 				21CB998D2580447B008A5FA9 /* SceneDelegate.swift in Sources */,
+				21CB99C325804657008A5FA9 /* ServiceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,14 +384,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		21CB99902580447B008A5FA9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				21CB99912580447B008A5FA9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		21CB999825804480008A5FA9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
