@@ -23,6 +23,13 @@
 		21CB99EE25805419008A5FA9 /* GMCommitListStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21CB99ED25805419008A5FA9 /* GMCommitListStoryboard.storyboard */; };
 		21CB99F325805568008A5FA9 /* GMCommitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CB99F225805568008A5FA9 /* GMCommitTableViewCell.swift */; };
 		21CB99F925805C2C008A5FA9 /* CommitsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CB99F825805C2C008A5FA9 /* CommitsService.swift */; };
+		21CB9A0825808489008A5FA9 /* Loading.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21CB9A0725808489008A5FA9 /* Loading.storyboard */; };
+		21CB9A0D258084E1008A5FA9 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CB9A0C258084E1008A5FA9 /* LoadingViewController.swift */; };
+		21CB9A12258085AF008A5FA9 /* LoadingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CB9A11258085AF008A5FA9 /* LoadingManager.swift */; };
+		21CB9A18258087CD008A5FA9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CB9A17258087CD008A5FA9 /* BaseViewController.swift */; };
+		21CB9A212580896B008A5FA9 /* ErrorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CB9A202580896B008A5FA9 /* ErrorInterface.swift */; };
+		21CB9A2925808985008A5FA9 /* LoadingInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CB9A2825808985008A5FA9 /* LoadingInterface.swift */; };
+		21CB9A3425808ABA008A5FA9 /* GMCommitListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CB9A3325808ABA008A5FA9 /* GMCommitListPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +72,13 @@
 		21CB99ED25805419008A5FA9 /* GMCommitListStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GMCommitListStoryboard.storyboard; sourceTree = "<group>"; };
 		21CB99F225805568008A5FA9 /* GMCommitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMCommitTableViewCell.swift; sourceTree = "<group>"; };
 		21CB99F825805C2C008A5FA9 /* CommitsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitsService.swift; sourceTree = "<group>"; };
+		21CB9A0725808489008A5FA9 /* Loading.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Loading.storyboard; sourceTree = "<group>"; };
+		21CB9A0C258084E1008A5FA9 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		21CB9A11258085AF008A5FA9 /* LoadingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingManager.swift; sourceTree = "<group>"; };
+		21CB9A17258087CD008A5FA9 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		21CB9A202580896B008A5FA9 /* ErrorInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorInterface.swift; sourceTree = "<group>"; };
+		21CB9A2825808985008A5FA9 /* LoadingInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingInterface.swift; sourceTree = "<group>"; };
+		21CB9A3325808ABA008A5FA9 /* GMCommitListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMCommitListPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +162,9 @@
 		21CB99C025804585008A5FA9 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				21CB9A1F258088F3008A5FA9 /* Protocols */,
+				21CB9A16258087B7008A5FA9 /* ViewController */,
+				21CB9A0625808469008A5FA9 /* View */,
 				21CB99CA2580507F008A5FA9 /* Models */,
 				21CB99C125804590008A5FA9 /* Networking */,
 			);
@@ -193,6 +210,7 @@
 		21CB99E42580530F008A5FA9 /* ListCommits */ = {
 			isa = PBXGroup;
 			children = (
+				21CB9A3225808AA1008A5FA9 /* Presenter */,
 				21CB99E5258053C1008A5FA9 /* GMCommitListViewController.swift */,
 				21CB99ED25805419008A5FA9 /* GMCommitListStoryboard.storyboard */,
 				21CB99F225805568008A5FA9 /* GMCommitTableViewCell.swift */,
@@ -206,6 +224,41 @@
 				21CB99F825805C2C008A5FA9 /* CommitsService.swift */,
 			);
 			path = Commits;
+			sourceTree = "<group>";
+		};
+		21CB9A0625808469008A5FA9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				21CB9A0725808489008A5FA9 /* Loading.storyboard */,
+				21CB9A0C258084E1008A5FA9 /* LoadingViewController.swift */,
+				21CB9A11258085AF008A5FA9 /* LoadingManager.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		21CB9A16258087B7008A5FA9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				21CB9A17258087CD008A5FA9 /* BaseViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		21CB9A1F258088F3008A5FA9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				21CB9A202580896B008A5FA9 /* ErrorInterface.swift */,
+				21CB9A2825808985008A5FA9 /* LoadingInterface.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		21CB9A3225808AA1008A5FA9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				21CB9A3325808ABA008A5FA9 /* GMCommitListPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +367,7 @@
 				21CB999A25804480008A5FA9 /* LaunchScreen.storyboard in Resources */,
 				21CB999725804480008A5FA9 /* Assets.xcassets in Resources */,
 				21CB99EE25805419008A5FA9 /* GMCommitListStoryboard.storyboard in Resources */,
+				21CB9A0825808489008A5FA9 /* Loading.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,17 +392,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21CB9A2925808985008A5FA9 /* LoadingInterface.swift in Sources */,
 				21CB99F925805C2C008A5FA9 /* CommitsService.swift in Sources */,
 				21CB99CD258050B2008A5FA9 /* Author.swift in Sources */,
 				21CB99DF258051F9008A5FA9 /* CommitItem.swift in Sources */,
 				21CB99D5258050E9008A5FA9 /* Commit.swift in Sources */,
 				21CB99952580447B008A5FA9 /* GitHubCommits.xcdatamodeld in Sources */,
+				21CB9A18258087CD008A5FA9 /* BaseViewController.swift in Sources */,
+				21CB9A12258085AF008A5FA9 /* LoadingManager.swift in Sources */,
 				21CB998B2580447B008A5FA9 /* AppDelegate.swift in Sources */,
 				21CB99F325805568008A5FA9 /* GMCommitTableViewCell.swift in Sources */,
 				21CB99E6258053C1008A5FA9 /* GMCommitListViewController.swift in Sources */,
 				21CB99DA2580515D008A5FA9 /* Tree.swift in Sources */,
+				21CB9A3425808ABA008A5FA9 /* GMCommitListPresenter.swift in Sources */,
 				21CB998D2580447B008A5FA9 /* SceneDelegate.swift in Sources */,
 				21CB99C325804657008A5FA9 /* ServiceManager.swift in Sources */,
+				21CB9A212580896B008A5FA9 /* ErrorInterface.swift in Sources */,
+				21CB9A0D258084E1008A5FA9 /* LoadingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,22 +7,20 @@
 
 import UIKit
 
-class GMCommitListViewController: UIViewController {
+class GMCommitListViewController: BaseViewController {
     
     @IBOutlet var tableView: UITableView!
     var commitList = [CommitItem]()
-
+    var presenter: GMCommitsModuleInterface!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        GMCommitsService.shared.getCommits { [weak self] commits in
-            guard let self = self else {
-                return
-            }
-            DispatchQueue.main.async {
-                self.commitList = commits
-                self.tableView.reloadData()
-            }
-        }
+        presenter = GMCommitListPresenter(self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter.getListCommits()
     }
     
 
@@ -36,6 +34,13 @@ class GMCommitListViewController: UIViewController {
     }
     */
 
+}
+
+extension GMCommitListViewController: GMCommitsInterface {
+    func resultCommits(_ commits: [CommitItem]) {
+        self.commitList = commits
+        self.tableView.reloadData()
+    }
 }
 
 extension GMCommitListViewController: UITableViewDataSource {
